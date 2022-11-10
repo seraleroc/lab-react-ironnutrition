@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
+import foods from "./foods.json";
+import FoodBox from './components/FoodBox.js';
+import {useState} from 'react'
+import {Button, Col, Divider, Row} from "antd";
+
+
+
 
 function App() {
+
+  const [allFoods, setAllFoods] = useState(foods);
+  console.log(allFoods);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   
+   <div>
+      <FoodBox food= {{name:foods.name, calories:foods.calories, image:foods.image, servings:foods.servings}}/>
+   </div>
+        );
+      
 }
 
-export default App;
+export default App; 

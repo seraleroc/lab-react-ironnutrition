@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import foods from "./foods.json";
 import reportWebVitals from './reportWebVitals';
+// src/index.js
+import 'antd/dist/antd.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
